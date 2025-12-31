@@ -6,8 +6,8 @@
 
 <meta name="google-site-verification" content="6pRAh0jVBFMVaxerK2nXN2q44nmLDVRKcbMYSPBmUb4" />
 
-<title>Free Image Compressor Online (1KB–800KB)</title>
-<meta name="description" content="Compress images up to 50MB. Resize width & height. Output size depends on image content. Free & fast.">
+<title>Free Image Compressor Online</title>
+<meta name="description" content="Compress JPG, PNG, SVG or GIF images online with the best quality and compression. Reduce image filesize instantly without signup.">
 <meta name="robots" content="index, follow">
 
 <link rel="icon" type="image/svg+xml"
@@ -55,7 +55,7 @@ body{
 
 .header{
   text-align:center;
-  margin-bottom:52px;
+  margin-bottom:32px;
 }
 .header a{
   text-decoration:none;
@@ -73,6 +73,23 @@ h1 span{color:var(--primary);}
   margin:auto;
   font-size:16px;
   color:var(--muted);
+}
+
+/* SEO CONTENT */
+.seo-section{
+  max-width:820px;
+  margin:40px auto 52px;
+  text-align:center;
+}
+.seo-section h2{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:14px;
+}
+.seo-section p{
+  font-size:15px;
+  line-height:1.8;
+  color:#4b5563;
 }
 
 /* 🧊 3D CARD */
@@ -147,11 +164,7 @@ input[type=range]{width:100%}
   color:#fff;
   font-weight:600;
   cursor:pointer;
-  box-shadow:
-    0 16px 40px rgba(109,92,255,.45),
-    inset 0 1px 0 rgba(255,255,255,.35);
 }
-.btn:hover{transform:translateY(-2px)}
 
 /* PREVIEW */
 .preview{
@@ -214,10 +227,15 @@ input[type=range]{width:100%}
 
   <div class="header">
     <a href=""><h1>Compress <span>Images</span></h1></a>
-    <p class="subtitle">
-      Upload images up to <b>50MB</b>. Output size depends on image content.
-    </p>
   </div>
+
+  <!-- SEO TEXT -->
+  <section class="seo-section">
+    <p>
+      Compress JPG, PNG, SVG or GIF images with the best quality and compression.
+      Reduce the filesize of your images online instantly.
+    </p>
+  </section>
 
   <div class="card">
 
@@ -284,12 +302,6 @@ upload.onchange=()=>{
   const f=upload.files[0];
   if(!f) return;
 
-  if(f.size > 50*1024*1024){
-    alert("Maximum upload size is 50 MB");
-    upload.value="";
-    return;
-  }
-
   fileInfo.textContent=`${f.name} · ${(f.size/1024/1024).toFixed(2)} MB`;
 
   sourceImage=new Image();
@@ -325,11 +337,6 @@ async function compress(){
     else{low=q;best=blob;}
   }
 
-  if(!best){
-    info.textContent="Cannot compress further.";
-    return;
-  }
-
   outputBlob=best;
   preview.src=URL.createObjectURL(best);
   info.textContent=`Final size: ${(best.size/1024).toFixed(2)} KB`;
@@ -345,6 +352,7 @@ download.onclick=()=>{
 </script>
 </body>
 </html>
+
 
 
 
