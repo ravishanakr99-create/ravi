@@ -2,204 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<!-- RESPONSIVE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ✅ GOOGLE SEARCH CONSOLE VERIFICATION -->
+<!-- Google Search Console -->
 <meta name="google-site-verification" content="6pRAh0jVBFMVaxerK2nXN2q44nmLDVRKcbMYSPBmUb4" />
 
-<!-- ✅ SEO (VERY IMPORTANT) -->
-<title>Free Image Compressor Online – Reduce Image Size to KB</title>
-<meta name="description" content="Free online image compressor to reduce image size to 2KB–600KB. Resize width & height with high quality output. No signup required.">
-<meta name="keywords" content="image compressor, compress image online, reduce image size, compress image to kb, image compressor vercel">
+<!-- SEO -->
+<title>Free Image Compressor Online (1KB–800KB)</title>
+<meta name="description" content="Compress images up to 50MB. Output size 1KB–800KB depending on image content. Resize width & height. Free & fast.">
 <meta name="robots" content="index, follow">
 
-<!-- FAVICON (INLINE) -->
+<!-- Favicon -->
 <link rel="icon" type="image/svg+xml"
 href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236d5cff'/%3E%3Cpath d='M30 35h40v10H30zm0 20h40v10H30z' fill='white'/%3E%3C/svg%3E">
 
 <style>
-:root{
-  --primary:#6d5cff;
-  --primary-glow:rgba(109,92,255,.45);
-  --bg:#f9fafc;
-  --border:#eceef5;
-  --text:#0b1220;
-  --muted:#6b7280;
-}
-
-*{
-  box-sizing:border-box;
-  font-family:
-    "Segoe UI Variable",
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif !important;
-}
-
+*{box-sizing:border-box;font-family:"Segoe UI Variable","Segoe UI",Roboto,Arial,sans-serif}
 body{
   margin:0;
-  overflow-x:hidden;
-  background:
-    radial-gradient(circle at center,
-      rgba(15,23,42,.12) 0%,
-      rgba(15,23,42,.06) 35%,
-      rgba(249,250,252,.9) 70%,
-      rgba(249,250,252,1) 100%
-    ),
-    linear-gradient(#e6e9f3 1px, transparent 1px),
-    linear-gradient(90deg,#e6e9f3 1px,transparent 1px);
-  background-size:100% 100%,34px 34px,34px 34px;
-  background-color:var(--bg);
-  color:var(--text);
+  background:#f9fafc;
+  color:#0b1220;
 }
+.wrapper{max-width:1100px;margin:auto;padding:80px 20px}
+.header{text-align:center;margin-bottom:50px}
+.header a{text-decoration:none;color:inherit}
+h1{font-size:42px;font-weight:700;margin:10px 0}
+h1 span{color:#6d5cff}
+.subtitle{color:#6b7280;font-size:16px;max-width:560px;margin:auto}
 
-/* LAYOUT */
-.wrapper{
-  max-width:1100px;
-  margin:auto;
-  padding:96px 24px;
-  perspective:1200px;
-}
-
-.header{text-align:center;margin-bottom:56px;}
-.badge{
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:.1em;
-  color:#16a34a;
-  margin-bottom:14px;
-}
-.header a{text-decoration:none;color:inherit;}
-
-h1{
-  font-size:46px;
-  font-weight:700;
-  letter-spacing:-0.015em;
-  margin:0;
-  cursor:pointer;
-}
-h1 span{color:var(--primary);}
-
-.subtitle{
-  max-width:520px;
-  margin:18px auto 0;
-  font-size:16px;
-  line-height:1.7;
-  color:var(--muted);
-}
-
-/* CARD */
 .card{
   display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:32px;
-  padding:32px;
-  border-radius:26px;
-  background:linear-gradient(180deg,#ffffff,#fdfdff);
-  border:1px solid var(--border);
-  transform-style:preserve-3d;
-  box-shadow:
-    0 40px 90px rgba(15,23,42,.14),
-    inset 0 1px 0 rgba(255,255,255,.9);
-}
-.card:hover{
-  transform:translateY(-10px);
+  grid-template-columns:1.2fr .8fr;
+  gap:30px;
+  padding:30px;
+  border-radius:24px;
+  background:#fff;
+  box-shadow:0 30px 80px rgba(0,0,0,.08)
 }
 
-/* UPLOAD */
 .upload-box{
-  border:2px dashed var(--border);
-  border-radius:20px;
-  padding:32px;
+  border:2px dashed #eceef5;
+  padding:30px;
+  border-radius:18px;
   text-align:center;
   cursor:pointer;
-  background:#fff;
 }
-.upload-box:hover{
-  border-color:var(--primary);
-  background:#f6f5ff;
-}
-.upload-title{font-size:16px;font-weight:600;}
-.upload-sub{font-size:13px;color:var(--muted);}
-.upload-file{font-size:13px;margin-top:8px;color:#4b5563;}
+.upload-box:hover{border-color:#6d5cff;background:#f6f5ff}
 
-/* FORM */
-.label{font-size:13px;font-weight:600;margin:22px 0 8px;}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.label{font-size:13px;font-weight:600;margin:22px 0 8px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .input{
-  border:1px solid var(--border);
-  border-radius:16px;
   padding:14px;
-  font-size:14px;
+  border-radius:14px;
+  border:1px solid #eceef5;
 }
 
-/* SLIDER */
-.range{margin:14px 0 18px;}
-input[type=range]{width:100%;}
+.range{margin:16px 0}
+input[type=range]{width:100%}
 
-/* NOTE */
 .note{
   font-size:13px;
+  color:#6b7280;
   line-height:1.6;
-  color:var(--muted);
-  margin-bottom:22px;
+  margin-bottom:18px;
 }
 
-/* BUTTON */
 .btn{
   width:100%;
   padding:16px;
   border:none;
-  border-radius:18px;
-  background:linear-gradient(180deg,#7c6cff,#6d5cff);
-  color:white;
-  font-size:15px;
+  border-radius:16px;
+  background:#6d5cff;
+  color:#fff;
   font-weight:600;
   cursor:pointer;
 }
 .secondary{
-  margin-top:14px;
+  margin-top:12px;
   background:#eef0ff;
-  color:var(--primary);
+  color:#6d5cff;
 }
 
-/* PREVIEW */
 .preview{
-  border:1px solid var(--border);
-  border-radius:24px;
+  border:1px solid #eceef5;
+  border-radius:22px;
   padding:18px;
-  background:#fff;
-}
-.preview-header{
-  font-size:13px;
-  font-weight:600;
-  margin-bottom:12px;
 }
 .preview-canvas{
-  height:340px;
-  border-radius:18px;
+  height:320px;
+  border-radius:16px;
   background:#f2f4fb;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-.preview img{
-  max-width:100%;
-  max-height:100%;
-  display:none;
-}
-.preview-placeholder{font-size:14px;color:var(--muted);}
+.preview img{max-width:100%;max-height:100%;display:none}
+.preview-placeholder{color:#6b7280}
 
-/* RESPONSIVE */
-@media (max-width:1024px){
-  .card{grid-template-columns:1fr;}
-}
-@media (max-width:640px){
-  .wrapper{padding:64px 16px;}
-  .row{grid-template-columns:1fr;}
+@media(max-width:900px){
+  .card{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -208,9 +109,11 @@ input[type=range]{width:100%;}
 <div class="wrapper">
 
   <div class="header">
-    <div class="badge">IMAGE TOOL</div>
     <a href=""><h1>Compress <span>Images</span></h1></a>
-    <p class="subtitle">Resize and compress images with precise size control.</p>
+    <p class="subtitle">
+      Upload images up to <b>50 MB</b>.  
+      Output size ranges from <b>1 KB – 800 KB</b> depending on image content.
+    </p>
   </div>
 
   <div class="card">
@@ -218,12 +121,11 @@ input[type=range]{width:100%;}
     <div>
       <div class="upload-box" id="uploadBox">
         <input type="file" id="upload" hidden accept="image/*">
-        <div class="upload-title">Click or drop image</div>
-        <div class="upload-sub">JPG · PNG · WEBP</div>
-        <div class="upload-file" id="fileInfo"></div>
+        <div>Click or drop image (Max 50 MB)</div>
+        <div id="fileInfo"></div>
       </div>
 
-      <div class="label">Resize</div>
+      <div class="label">Resize (optional)</div>
       <div class="row">
         <input class="input" id="width" placeholder="Width (px)">
         <input class="input" id="height" placeholder="Height (px)">
@@ -232,19 +134,23 @@ input[type=range]{width:100%;}
       <div class="label">Target size</div>
       <div class="range">
         <b><span id="val">100</span> KB</b>
-        <input type="range" min="3" max="600" value="100" id="range">
+        <input type="range" min="1" max="800" value="100" id="range">
+      </div>
+
+      <div class="note">
+        Minimum achievable size depends on image complexity.  
+        Photos may not reach 1 KB.
       </div>
 
       <button class="btn" onclick="compress()">Compress</button>
-      <button class="btn secondary" id="download" style="display:none;">Download</button>
-      <div class="upload-sub" id="info"></div>
+      <button class="btn secondary" id="download" style="display:none">Download</button>
+      <div class="note" id="info"></div>
     </div>
 
     <div class="preview">
-      <div class="preview-header">Preview</div>
       <div class="preview-canvas">
         <img id="preview">
-        <div class="preview-placeholder" id="previewPlaceholder">Image preview</div>
+        <div class="preview-placeholder" id="placeholder">Preview</div>
       </div>
     </div>
 
@@ -255,12 +161,10 @@ input[type=range]{width:100%;}
 const upload=document.getElementById("upload");
 const uploadBox=document.getElementById("uploadBox");
 const fileInfo=document.getElementById("fileInfo");
-const widthInput=document.getElementById("width");
-const heightInput=document.getElementById("height");
 const range=document.getElementById("range");
 const val=document.getElementById("val");
 const preview=document.getElementById("preview");
-const placeholder=document.getElementById("previewPlaceholder");
+const placeholder=document.getElementById("placeholder");
 const info=document.getElementById("info");
 const download=document.getElementById("download");
 
@@ -272,11 +176,16 @@ range.oninput=()=>val.textContent=range.value;
 upload.onchange=()=>{
   const f=upload.files[0];
   if(!f) return;
-  fileInfo.textContent=`${f.name} · ${(f.size/1024).toFixed(1)} KB`;
+
+  if(f.size > 50*1024*1024){
+    alert("Maximum upload size is 50 MB");
+    upload.value="";
+    return;
+  }
+
+  fileInfo.textContent=`${f.name} · ${(f.size/1024/1024).toFixed(2)} MB`;
   sourceImage=new Image();
   sourceImage.onload=()=>{
-    widthInput.value=sourceImage.width;
-    heightInput.value=sourceImage.height;
     preview.src=sourceImage.src;
     preview.style.display="block";
     placeholder.style.display="none";
@@ -286,21 +195,32 @@ upload.onchange=()=>{
 
 async function compress(){
   if(!sourceImage) return alert("Upload image first");
+
   const targetKB=parseInt(range.value);
-  const scale=Math.min(1,Math.sqrt(targetKB/600));
-  const w=Math.max(40,Math.floor(sourceImage.width*scale));
-  const h=Math.max(40,Math.floor(sourceImage.height*scale));
+
+  // Aggressive downscale for large images
+  const MAX_DIM=800;
+  let scale=Math.min(1, MAX_DIM/Math.max(sourceImage.width, sourceImage.height));
+
+  const w=Math.max(40, Math.floor(sourceImage.width*scale));
+  const h=Math.max(40, Math.floor(sourceImage.height*scale));
 
   const canvas=document.createElement("canvas");
   canvas.width=w; canvas.height=h;
   canvas.getContext("2d").drawImage(sourceImage,0,0,w,h);
 
-  let low=0.2, high=0.95, best;
-  for(let i=0;i<12;i++){
+  let low=0.03, high=0.95, best=null;
+
+  for(let i=0;i<18;i++){
     const q=(low+high)/2;
-    const b=await new Promise(r=>canvas.toBlob(r,"image/jpeg",q));
-    if(b.size/1024>targetKB) high=q;
-    else{ low=q; best=b; }
+    const blob=await new Promise(r=>canvas.toBlob(r,"image/jpeg",q));
+    if(blob.size/1024 > targetKB) high=q;
+    else{low=q;best=blob;}
+  }
+
+  if(!best){
+    info.textContent="Minimum achievable size reached. Cannot compress further.";
+    return;
   }
 
   outputBlob=best;
@@ -318,6 +238,8 @@ download.onclick=()=>{
 </script>
 </body>
 </html>
+
+
 
 
 
